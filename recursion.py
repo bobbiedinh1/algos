@@ -1,3 +1,5 @@
+from random import randrange
+
 #example of how recursion works
 def firstMethod():
     secondMethod()
@@ -23,15 +25,24 @@ firstMethod()
 #once fourthMethod is completed it then gets removed from memory(the stack) and continues back to thirdMethod.
 
 
+#RECURSION COMPARSION
 
 #you have a stack of hundreds and you need to know how much money you have
-from random import randrange
 
 def recursion(stack, totalAmount=0):
     if (stack==0):
         return totalAmount
     totalAmount+=100
-    print(totalAmount)
     return recursion(stack-1, totalAmount)
 
 stack = randrange(1, 100)
+print(stack)
+print(recursion(stack))
+
+def iteration(stack, totalAmount=0):
+    while stack>0:
+        totalAmount+=100
+        stack-=1
+    return totalAmount
+
+print(iteration(stack))
