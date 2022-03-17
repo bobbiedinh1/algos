@@ -5,6 +5,14 @@ def sumOfDigits(n):
     print(n)
     if (n==0):
         return n
-    return ((n%10)+sumOfDigits(n//10))
+    return ((n%10)+sumOfDigits(n//10)) 
 
-print(sumOfDigits(1122))    
+#2. how to calculate power of a number using recursion?
+
+def power(num, exp):
+    assert int(exp)==exp and exp>=0, ""
+    if (exp==0):
+        return 1
+    return num*power(num, exp-1)
+
+print(power(2.5,3))
