@@ -27,4 +27,11 @@ def gcd(a,b):
         return a
     return (gcd(b, a%b))
 
-print(gcd(27,16))
+#4 how to convert num from decimal to binary
+
+def binary(a):
+    if a==0:
+        return "1"
+    return ((a%2)+binary(a//2))
+
+binary(12)
