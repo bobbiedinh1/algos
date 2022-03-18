@@ -15,4 +15,11 @@ def power(num, exp):
         return 1
     return num*power(num, exp-1)
 
-print(power(2.5,3))
+#3. find gcd of two digits
+
+def gcd(a,b):
+    if b==0:
+        return a
+    return (gcd(b, a%b))
+
+print(gcd(27,16))
