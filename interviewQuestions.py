@@ -11,7 +11,7 @@ def sumOfDigits(n):
 
 def power(num, exp):
     assert int(exp)==exp and exp>=0, ""
-    if (exp==0):
+    if exp in [0,1]:
         return 1
     return num*power(num, exp-1)
 
