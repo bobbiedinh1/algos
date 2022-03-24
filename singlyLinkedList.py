@@ -24,3 +24,12 @@ def addToBeginning(node, sList):
         node.next = sList.head
         sList.head = node
 
+def addToEnd(node, sList):
+    #if list is empty then the node becomes the head
+    if (sList.head==None):
+        sList.head = node
+        sList.tail = node
+    #else the current tail node.next will follow the new node and the new node becomes the new tail
+    else:
+        sList.tail.next = node
+        sList.tail = node
